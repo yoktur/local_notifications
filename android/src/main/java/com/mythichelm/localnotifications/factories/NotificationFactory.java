@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.support.v4.app.NotificationCompat;
 
 import com.google.gson.Gson;
+import android.util.Log;
 
 import com.mythichelm.localnotifications.LocalNotificationsPlugin;
 import com.mythichelm.localnotifications.entities.NotificationAction;
