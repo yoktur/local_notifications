@@ -4,12 +4,15 @@ import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.support.v4.app.NotificationCompat;
 
 import com.google.gson.Gson;
 import android.util.Log;
 
 import com.mythichelm.localnotifications.LocalNotificationsPlugin;
+import com.mythichelm.localnotifications.R;
 import com.mythichelm.localnotifications.entities.NotificationAction;
 import com.mythichelm.localnotifications.entities.NotificationSettings;
 
@@ -26,6 +29,9 @@ public class NotificationFactory implements INotificationFactory {
                 .setContentTitle(settings.Title)
                 .setContentText(settings.Body)
                 .setSmallIcon(appIconResId)
+                .setLargeIcon(BitmapFactory.decodeResource(context.getResources(),
+                        appIconResId))
+                .setColor(Color.GRAY)
                 .setOngoing(settings.IsOngoing)
                 .setContentIntent(settings.OnNotificationClick.getIntent(context))
                 .setPriority(settings.Priority);
