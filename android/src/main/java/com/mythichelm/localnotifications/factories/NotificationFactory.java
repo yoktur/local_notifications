@@ -76,7 +76,7 @@ public class NotificationFactory implements INotificationFactory {
                     .getApplicationInfo(context.getPackageName(), PackageManager.GET_META_DATA)
                     .icon;
         } catch (PackageManager.NameNotFoundException ignored) {
-            Log.d("AF icon not found "+ignored.toString());
+            Log.d("AF", "error icon "+ignored.getMessage());
         }
 
         return resId;
